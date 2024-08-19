@@ -128,10 +128,117 @@ body {
     height: 56px;
     max-width: 288px;
     width: 100%;
-    transition-duration: 0.8s;
+    transition-duration: 0.5s;
 }
 
 .button:hover {
     color: #f8fcff;
     background: #83add3;
 }
+
+/* ============================================================================ */
+
+.main__general {
+    padding: 120px 0;
+}
+
+.main__wrapper {
+    display: flex;
+    gap: 126px;
+}
+
+.main__body {
+    width: 100%;
+}
+
+/* =============================================================================*/
+.sidebar {
+    padding: 30px;
+    max-width: 282px;
+    width: 100%;
+    border: 2px solid #d0dce7;
+    background-color: #f8fcff;
+    font-size: 16px;
+    font-weight: 500;
+    color: #25282b;
+}
+
+.sidebar__item {
+    margin-bottom: 20px;
+}
+
+.sidebar__item:last-child {
+    margin-bottom: 0;
+}
+
+/* ============================================================================ */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    color: #f8fcff;
+}
+
+.gallery__link {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 100%;
+}
+
+.gallery__link--large-left {
+    grid-area: 1/1/3/3;
+}
+
+.gallery__link--large-right {
+    grid-area: 3/3/5/5;
+}
+
+.gallery__more {
+    display: flex;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #1d6fb6b3;
+    max-height: 53px;
+    height: 100%;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: all 0.7s;
+}
+
+.gallery__link:hover .gallery__more {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
+.gallery__link--large-left .gallery__more,
+.gallery__link--large-right .gallery__more {
+    max-height: 103px;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 29px;
+}
+
+.gallery__img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    object-fit: cover;
+    object-position: center center;
+}
+
+/* ======================================================================= */
+
