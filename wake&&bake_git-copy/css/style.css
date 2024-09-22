@@ -294,9 +294,10 @@
 }
 
 .footer__inner {
-    display: flex;
+    display: grid;
+    grid-template-columns: .9fr .9fr 1.1fr auto;
     align-items: start;
-    padding: 30px 0px 60px;
+    padding: 30px 0 60px;
 }
 
 .footer__info {
@@ -305,6 +306,7 @@
 }
 
 .footer__logo {
+    display: block;
     max-width: 239px;
 }
 
@@ -312,38 +314,29 @@
     width: 100%;
 }
 
+.footer__info p {
+    margin-bottom: 20px;
+    ;
+}
+
 .social__list {
-    margin-top: 20px;
     display: flex;
     gap: 15px;
 }
 
-.social__link path {
+.social__link svg:hover path {
     transition: var(--transition);
-}
-
-.social__link:hover path {
     fill: var(--accent-color);
 }
 
 .footer__nav-list {
     display: flex;
     flex-direction: column;
-    margin-left: 56px;
+    gap: 20px;
     margin-top: 30px;
 }
 
-.footer__nav-item {
-    margin-bottom: 15px;
-    max-height: 24px;
-}
-
-.footer__nav-item:last-child {
-    margin-bottom: 0;
-}
-
 .footer__nav-link {
-    display: block;
     padding: 5px 0;
     position: relative;
     z-index: 1;
@@ -370,30 +363,36 @@
 .footer__timetable-list {
     display: flex;
     flex-direction: column;
-    margin-left: 127px;
-    margin-top: 30px;
     gap: 10px;
+    margin-top: 30px;
 }
 
-.footer__timetable img {
+.footer__timetable-list img {
     margin-right: 8px;
 }
 
-.footer__timetable span {
+.footer__timetable-list li:first-child {
     line-height: 1.6;
 }
 
+.footer__timetable-list span {
+    margin-right: 10px;
+}
+
+.footer__timetable-list span:last-child {
+    margin-right: 0;
+}
+
 .footer__contact {
-    max-width: 220px;
-    margin-left: 89px;
+    display: flex;
+    flex-direction: column;
     margin-top: 30px;
+    line-height: 1.6;
 }
 
 .footer__contact a {
     font-size: 24px;
     font-weight: 500;
-    line-height: 1.6;
-    text-transform: uppercase;
     transition: var(--transition);
 }
 
@@ -402,12 +401,15 @@
 }
 
 .footer__copy {
-    color: #DEC5B1;
     display: flex;
-    gap: 5px;
     margin-top: 47px;
     margin-left: 9px;
+    gap: 5px;
+    line-height: 1.5;
+    color: #DEC5B1;
+    ;
 }
+
 
 /* ==================================== */
 
@@ -427,6 +429,32 @@
         max-width: none;
         color: var(--general-text);
     }
+
+    /* ======================================= */
+
+    .footer__inner {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .footer__info,
+    .footer__contact {
+        grid-column: 1/3;
+    }
+
+    .footer__timetable {
+        align-content: center;
+        max-height: 125px;
+        height: 100%;
+    }
+
+    .footer__info,
+    .footer__nav-list,
+    .footer__timetable-list,
+    .footer__contact {
+        align-items: center;
+    }
+
 }
 
 @media (max-width:900px) {
@@ -483,6 +511,14 @@
         display: flex;
         margin: 0 0 30px;
     }
+
+    /* ============================================= */
+    .footer__inner {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        justify-items: center;
+        grid-row-gap: 10px;
+    }
 }
 
 @media (max-width:600px) {
@@ -492,5 +528,20 @@
 
     .hero__title {
         font-size: 12vw;
+    }
+
+    /* ====================================== */
+
+    .footer__inner {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+    }
+
+    .footer__timetable {
+        grid-row-start: 3;
+    }
+
+    .footer__contact {
+        grid-row-start: 4;
     }
 }
