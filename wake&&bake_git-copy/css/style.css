@@ -30,6 +30,10 @@
     flex-grow: 1;
 }
 
+.main__about {
+    padding: 140px 0;
+}
+
 .container {
     max-width: 1310px;
     height: 100%;
@@ -165,7 +169,7 @@
     transform: rotate(-45deg);
 }
 
-.hero {
+.header__hero {
     padding: 55px 0 140px;
 }
 
@@ -285,6 +289,111 @@
 }
 
 /* ======================================= */
+
+.about__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 53px;
+}
+
+.about__img {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.about__img>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+.about__img-control {
+    position: absolute;
+    bottom: 5.5%;
+    left: 5%;
+    max-width: 299px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 20px;
+    background: #957b97e6;
+    border-radius: 20px;
+    color: var(--general-bg);
+}
+
+.about__img-button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 78px;
+    height: 78px;
+    background: var(--general-bg);
+    border-radius: 50%;
+}
+
+.about__img-button::after {
+    display: block;
+    position: absolute;
+    content: '';
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    border: 1px solid #CEAAD0;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.about__img-button:hover::after {
+    content: '';
+    opacity: 1;
+}
+
+.about__title {
+    font-family: 'Gabriola';
+    color: var(--accent-text);
+    font-size: 74px;
+    line-height: 0.82;
+}
+
+.about__title-text {
+    margin-bottom: 30px;
+}
+
+.about__text {
+    margin-bottom: 40px;
+}
+
+.about__grid {
+    display: grid;
+    gap: 32px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.about__grid-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 29px 24px;
+    border-radius: 20px;
+    background: var(--accent-bg);
+}
+
+.about__grid-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid var(--general-text);
+    flex-shrink: 0;
+}
+
+
 
 /* ========================================== */
 
@@ -522,7 +631,7 @@
 }
 
 @media (max-width:600px) {
-    .hero {
+    .header__hero {
         padding-bottom: 80px;
     }
 
@@ -534,7 +643,7 @@
 
     .footer__inner {
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(4, 1fr);
+        gap: 0;
     }
 
     .footer__timetable {
@@ -543,5 +652,6 @@
 
     .footer__contact {
         grid-row-start: 4;
+        margin-top: 10px;
     }
 }
