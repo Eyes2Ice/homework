@@ -23,7 +23,6 @@
     overflow: hidden;
 }
 
-
 .wrapper {
     min-height: 100%;
     width: 100%;
@@ -72,9 +71,16 @@
     align-items: center;
     position: fixed;
     inset: 0;
-    background: #00000048;
-    z-index: 10;
+    background: #00000071;
+    z-index: 11;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .6s;
+}
 
+.body--opened-modal .modal {
+    opacity: 1;
+    visibility: visible;
 }
 
 .modal__window {
@@ -129,11 +135,12 @@
     width: 100%;
 }
 
-.modal__form-label {
+.field {
     position: relative;
+    display: block;
 }
 
-.modal__form-label span {
+.field span {
     position: absolute;
     top: 12px;
     left: 28px;
@@ -141,9 +148,10 @@
     color: #AC907A;
     opacity: 0;
     visibility: hidden;
+    transition: var(--transition)
 }
 
-.modal__form-input {
+.field__input {
     padding: 19px 28px;
     border-radius: 100px;
     border: 1px solid #AC907A;
@@ -153,28 +161,28 @@
     width: 100%;
 }
 
-.modal__form-input::placeholder {
+.field__input::placeholder {
     color: #AC907A;
 }
 
-.modal__form-input,
-.modal__form-input::placeholder {
+.field__input,
+.field__input::placeholder {
     transition: var(--transition)
 }
 
-.modal__form-input:hover {
+.field__input:hover {
     border-color: var(--accent-color)
 }
 
-.modal__form-input:hover::placeholder {
+.field__input:hover::placeholder {
     color: var(--accent-color);
 }
 
-.modal__form-input:focus {
+.field__input:focus {
     padding: 26px 28px 12px 28px;
 }
 
-.modal__form-input:focus+span {
+.field__input:focus+span {
     opacity: 1;
     visibility: visible;
 }
