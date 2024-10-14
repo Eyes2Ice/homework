@@ -68,6 +68,7 @@
 .modal {
     display: flex;
     justify-content: center;
+    padding: 15px;
     align-items: center;
     position: fixed;
     inset: 0;
@@ -112,7 +113,10 @@
 
 .modal__img {
     margin: -65px 0 15px 12px;
+}
 
+.modal__img img {
+    max-width: 100%;
 }
 
 .modal__title {
@@ -859,6 +863,7 @@
         padding: 10px;
         max-height: 80px;
     }
+
     /* ================================== */
     .footer__inner {
         grid-template-columns: 1fr;
@@ -872,5 +877,25 @@
     .footer__contact {
         grid-row-start: 4;
         margin-top: 10px;
+    }
+
+    /* =============================== */
+}
+
+@media (max-width:450px) {
+    .modal__window {
+        padding: 0 15px 45px;
+    }
+
+    .modal__img {
+        margin-top: -45px;
+    }
+
+    .modal__img img {
+        width: 75%
+    }
+
+    .modal__title {
+        font-size: 36px;
     }
 }
