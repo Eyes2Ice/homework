@@ -35,7 +35,7 @@
 
         const target = e.target
 
-        if (target.closest('.modal__cansel') || target.closest('.button') || target.classList.contains('modal')) {
+        if (target.closest('.modal__cansel') || target.classList.contains('modal')) {
             document.body.classList.remove('body--opened-modal')
         }
     }
@@ -78,19 +78,11 @@
 
         el.addEventListener('click', (e) => {
 
-            const accordionList = e.currentTarget;
-            const accordionOpenedItem = accordionList.querySelector('.accordion-list__item--opened')
-            const accordionOpenedContent = accordionList.querySelector('.accordion-list__item--opened .accordion-list__content')
-            
             const accordionControl = e.target.closest('.accordion-list__control');
             if (!accordionControl) return
             const accordionItem = accordionControl.parentElement;
             const accordionContent = accordionControl.nextElementSibling;
 
-            if (accordionOpenedItem && accordionItem != accordionOpenedItem) {
-                accordionOpenedItem.classList.remove('accordion-list__item--opened')
-                accordionOpenedContent.style.maxHeight = null;
-            }
             accordionItem.classList.toggle('accordion-list__item--opened');
 
             if (accordionItem.classList.contains('accordion-list__item--opened')) {
