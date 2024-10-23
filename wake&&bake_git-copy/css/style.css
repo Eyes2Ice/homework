@@ -1161,11 +1161,19 @@
 
     /* ========================================= */
 
+    .main__program {
+        padding-bottom: 85px;
+    }
+
     .program__title {
         font-size: 12vw;
         text-align: center;
     }
 
+    .program__top {
+        margin-bottom: 40px;
+    }
+    
     .program__title-text {
         text-align: center;
     }
@@ -1175,7 +1183,7 @@
     }
 
     .program__action {
-        grid-template: repeat(3, auto) / auto auto;
+        grid-template: none;
         gap: 15px;
     }
 
@@ -1183,6 +1191,18 @@
         grid-row: auto;
         grid-column: 1/-1;
         justify-self: center;
+    }
+
+    .program__price {
+        text-align: center;
+    }
+
+    .program__button {
+        grid-column: auto;
+    }
+
+    .accordion-list__item {
+        margin-bottom: 20px;
     }
 
     .accordion-list__control {
@@ -1255,8 +1275,8 @@
         grid-template: none;
     }
 
-    .program__price {
-        text-align: center;
+    .program__price-value--bigger {
+        font-size: 45px;
     }
 
     .accordion-list__item {
