@@ -81,7 +81,7 @@
             const accordionList = e.currentTarget;
             const accordionOpenedItem = accordionList.querySelector('.accordion-list__item--opened')
             const accordionOpenedContent = accordionList.querySelector('.accordion-list__item--opened .accordion-list__content')
-            
+
             const accordionControl = e.target.closest('.accordion-list__control');
             if (!accordionControl) return
             const accordionItem = accordionControl.parentElement;
@@ -101,5 +101,22 @@
         })
     })
 
+    // ===============================Слайдер галереи===========================
+
+    const swiper = new Swiper('.gallery__slider', {
+
+        spaceBetween: 32,
+        slidesPerView: 4,
+
+        pagination: {
+            el: '.gallery__pagination',
+            type: 'fraction',
+        },
+
+        navigation: {
+            nextEl: '.gallery__next',
+            prevEl: '.gallery__prev',
+        },
+    });
 })()
 
