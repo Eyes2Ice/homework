@@ -376,8 +376,6 @@
     margin-bottom: 20px;
 }
 
-.gallery__text {}
-
 .gallery__nav {
     display: flex;
     gap: 30px;
@@ -419,10 +417,6 @@
 
 .gallery__pagination {
     display: flex;
-}
-
-.gallery__wrapper {
-    
 }
 
 .gallery__slide {
