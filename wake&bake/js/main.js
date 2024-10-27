@@ -105,8 +105,23 @@
 
     const swiper = new Swiper('.gallery__slider', {
 
-        spaceBetween: 32,
-        slidesPerView: 4,
+        spaceBetween: 15,
+        slidesPerView: 1.5,
+
+        breakpoints: {
+            1101: {
+                slidesPerView: 4,
+            },
+            801: {
+                spaceBetween: 32,
+            },
+            601: {
+                slidesPerView: 3,
+            },
+            450: {
+                slidesPerView: 2,
+            }
+        },
 
         pagination: {
             el: '.gallery__pagination',
