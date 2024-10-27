@@ -48,7 +48,8 @@
     padding: 140px 0;
 }
 
-.main__gallery {
+.main__gallery,
+.main__testimonials {
     padding-bottom: 140px;
 }
 
