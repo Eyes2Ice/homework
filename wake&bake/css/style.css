@@ -626,7 +626,122 @@
     height: 7px;
 }
 
+/* /=======================================================/ */
 
+.contact {
+    padding: 140px 0;
+    background: url("../img/decoration/bg-contact.png") 50% 0% / cover no-repeat;
+}
+
+.contact__inner {
+    display: flex;
+    gap: 84px;
+    align-items: center;
+}
+
+.contact__img img {
+    width: 100%;
+    filter: drop-shadow(0px 4px 30px #c6b0a14d);
+}
+
+.contact__body {
+    max-width: 420px;
+}
+
+.contact__title {
+    margin-bottom: 20px;
+}
+
+.contact__text {
+    margin-bottom: 40px;
+}
+
+.contact__form {}
+
+.contact__label {
+    margin-bottom: 10px;
+}
+
+.contact__input {
+    padding: 19px 28px;
+    border-radius: 100px;
+    border: 1px solid var(--input-color);
+    background: #00000000;
+    font-size: 16px;
+    color: var(--general-text);
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.contact__input::placeholder {
+    color: var(--input-color);
+}
+
+.contact__input,
+.contact__input::placeholder {
+    transition: var(--transition)
+}
+
+.contact__input:hover {
+    border-color: var(--accent-color)
+}
+
+.contact__input:hover::placeholder {
+    color: var(--accent-color);
+}
+
+.contact__checkbox-label {
+    display: flex;
+    align-items: start;
+    gap: 5px;
+    margin-bottom: 20px;
+    max-width: 288px;
+    font-size: 13px;
+}
+
+.contact__checkbox-label a {
+    text-decoration: underline;
+    transition: var(--transition);
+}
+
+.contact__checkbox-label a:hover {
+    color: var(--accent-color);
+}
+
+.contact__checkbox {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 2px solid var(--input-color);
+    flex-shrink: 0;
+    transition: var(--transition);
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+
+}
+
+.contact__checkbox::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url("../img/icons/check.svg") 50% 50% no-repeat;
+    transition: var(--transition);
+    opacity: 0;
+}
+
+.contact__checkbox:hover {
+    border: 2px solid var(--accent-color);
+}
+
+.contact__checkbox:checked {
+    border: 2px solid var(--accent-color);
+    background: var(--accent-color);
+}
+
+.contact__checkbox:checked::before {
+    opacity: 1;
+}
 /*=======================================================/
 
 

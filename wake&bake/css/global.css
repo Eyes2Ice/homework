@@ -5,6 +5,7 @@
     --accent-bg: #FFE0CB;
     --accent-color: #FFA55C;
     --accent-color-purple: #CEAAD0;
+    --input-color: #AC907A;
     --transition: all .4s;
     --border-radius: 20px;
 }
@@ -64,6 +65,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
     color: var(--general-text);
     font-size: 16px;
     font-weight: 500;
@@ -122,7 +124,7 @@
 
 .modal__cansel:hover path,
 .modal__cansel:hover rect {
-    stroke: #AC907A;
+    stroke: var(--input-color);
 }
 
 .modal__img {
@@ -163,7 +165,7 @@
     top: 12px;
     left: 28px;
     font-size: 11px;
-    color: #AC907A;
+    color: var(--input-color);
     opacity: 0;
     visibility: hidden;
     transition: var(--transition)
@@ -172,7 +174,7 @@
 .field__input {
     padding: 19px 28px;
     border-radius: 100px;
-    border: 1px solid #AC907A;
+    border: 1px solid var(--input-color);
     background: #00000000;
     font-size: 16px;
     color: var(--general-text);
@@ -180,7 +182,7 @@
 }
 
 .field__input::placeholder {
-    color: #AC907A;
+    color: var(--input-color);
 }
 
 .field__input,
