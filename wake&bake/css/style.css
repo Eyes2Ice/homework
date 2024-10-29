@@ -634,9 +634,25 @@
 }
 
 .contact__inner {
+    position: relative;
+
     display: flex;
     gap: 84px;
     align-items: center;
+}
+
+.contact__inner::before {
+    content: url('../img/decoration/berries.png');
+    position: absolute;
+    top: -5%;
+    left: 0%;
+}
+
+.contact__inner::after {
+    content: url('../img/decoration/berries-2.png');
+    position: absolute;
+    top: 5%;
+    right: 0%;
 }
 
 .contact__img img {
@@ -655,8 +671,6 @@
 .contact__text {
     margin-bottom: 40px;
 }
-
-.contact__form {}
 
 .contact__label {
     margin-bottom: 10px;
@@ -742,6 +756,7 @@
 .contact__checkbox:checked::before {
     opacity: 1;
 }
+
 /*=======================================================/
 
 
@@ -774,7 +789,14 @@
         align-items: stretch;
     }
 
+    /* ================================= */
 
+    .contact__inner::after {
+        content: url('../img/decoration/berries-2.png');
+        position: absolute;
+        top: -15%;
+        right: 0%;
+    }
 
     /* ========================================= */
     .footer__inner {
@@ -832,6 +854,11 @@
         padding: 35px 25px;
     }
 
+    /* ============================== */
+
+    .contact__inner {
+        gap: 30px;
+    }
 }
 
 @media (max-width:900px) {
@@ -898,9 +925,29 @@
     }
 
     /* ============================== */
+
+    .contact__inner {
+        justify-content: center;
+    }
+
+    .contact__inner::before {
+        content: url('../img/decoration/berries.png');
+        position: absolute;
+        top: -15%;
+        left: 0%;
+    }
+
+    .contact__img {
+        display: none;
+    }
 }
 
 @media (max-width:800px) {
+    html {
+        scroll-padding-top: 10vw;
+    }
+
+
     .hero__content {
         max-width: none;
         display: flex;
@@ -986,6 +1033,12 @@
 
     .testimonials__nav {
         align-self: end;
+    }
+
+    /* ========================================= */
+
+    .contact__title {
+        font-size: 65px;
     }
 
     /* ========================================= */
@@ -1182,6 +1235,24 @@
     }
 
     /* ================================== */
+
+    .contact {
+        padding: 85px 0;
+    }
+
+    .contact__inner {
+        text-align: center;
+    }
+
+    .contact__inner::before {
+        display: none;
+    }
+
+    .contact__title {
+        font-size: 12vw;
+    }
+
+    /* ================================== */
     .footer__inner {
         grid-template-columns: 1fr;
         gap: 0;
@@ -1231,7 +1302,6 @@
     }
 
     .accordion-list__control {
-        padding: 10px;
         font-size: 24px;
     }
 
@@ -1247,5 +1317,15 @@
 
     .testimonials__slide {
         padding: 15px 10px;
+    }
+
+    /* ================================== */
+
+    .contact__title {
+        margin-bottom: 15px;
+    }
+
+    .contact__text {
+        margin-bottom: 25px;
     }
 }

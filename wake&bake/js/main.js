@@ -84,6 +84,7 @@
 
             const accordionControl = e.target.closest('.accordion-list__control');
             if (!accordionControl) return
+            e.preventDefault();
             const accordionItem = accordionControl.parentElement;
             const accordionContent = accordionControl.nextElementSibling;
 
@@ -164,5 +165,11 @@
             },
         },
     });
+
+    // ===============================Маска для телефонного инпута===========================
+
+    const inputsTel = document.querySelectorAll('input[type="tel"]');
+    let im = new Inputmask('+7 (999) 999-99-99');
+    im.mask(inputsTel);
 })()
 
