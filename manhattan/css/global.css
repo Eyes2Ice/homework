@@ -1,0 +1,30 @@
+:root {
+    --general-text: #ffffff;
+    --accent-color: #D5621D;
+    --accent-bg: #d5621d1a;
+
+    --transition: all .5s;
+}
+
+body {
+    font-family: 'Stolzl', 'Arial', sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    background: #210E09;
+    color: #ffffff;
+}
+
+.wrapper {
+    min-height: 100%;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 1310px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}

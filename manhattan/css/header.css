@@ -1,0 +1,38 @@
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.nav__list {
+    display: flex;
+    gap: 30px;
+}
+
+.nav__link {
+    padding: 15px 0 15px;
+    transition: var(--transition);
+}
+
+.nav__link:hover {
+    color: var(--accent-color);
+}
+
+.header__button {
+    padding: 15px 30px;
+    background: transparent;
+    border-radius: 5px;
+    border: 2px solid var(--accent-color);
+
+    color: var(--general-text);
+    text-transform: uppercase;
+    letter-spacing: 0.7;
+
+    transition: var(--transition);
+}
+
+.header__button:hover {
+    background: var(--general-text);
+    color: var(--accent-color);
+}
