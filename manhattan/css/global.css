@@ -1,3 +1,8 @@
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
 :root {
     --general-text: #ffffff;
     --accent-text: #210E09;
@@ -12,7 +17,11 @@ body {
     font-size: 14px;
     line-height: 1.5;
     background: #210E09;
-    color: #ffffff;
+    color: var(--general-text);
+}
+
+.body--opened-menu {
+    overflow: hidden;
 }
 
 .wrapper {
@@ -21,6 +30,10 @@ body {
     overflow: hidden;
     display: flex;
     flex-direction: column;
+}
+
+.main {
+    flex-grow: 1;
 }
 
 .container {

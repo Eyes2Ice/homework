@@ -5,6 +5,83 @@
     margin-top: 30px;
 }
 
+.header__logo {
+    z-index: 11;
+}
+
+.hedaer__logo img {
+    width: 100%;
+}
+
+.burger-icon {
+    display: none;
+    z-index: 11;
+    width: 45px;
+    height: 45px;
+    justify-content: center;
+    align-items: center;
+    transition: var(--transition);
+}
+
+.burger-icon span {
+    position: relative;
+}
+
+.burger-icon:hover {
+    background: var(--general-text);
+}
+
+.burger-icon:hover span {
+    background: var(--accent-color);
+}
+
+.burger-icon:hover span::before {
+    background: var(--accent-color);
+}
+
+.burger-icon:hover span::after {
+    background: var(--accent-color);
+}
+
+.burger-icon span,
+.burger-icon span::after,
+.burger-icon span::before {
+    display: block;
+    width: 30px;
+    height: 5px;
+    border-radius: 100px;
+    background: var(--general-text);
+    transition: var(--transition);
+}
+
+.burger-icon span::after,
+.burger-icon span::before {
+    content: '';
+    position: absolute;
+}
+
+.burger-icon span::before {
+    top: 8px;
+}
+
+.burger-icon span::after {
+    bottom: 8px;
+}
+
+.body--opened-menu .burger-icon span {
+    background: transparent;
+}
+
+.body--opened-menu .burger-icon span::before {
+    top: 0;
+    transform: rotate(45deg);
+}
+
+.body--opened-menu .burger-icon span::after {
+    bottom: 0;
+    transform: rotate(-45deg);
+}
+
 .nav__list {
     display: flex;
     gap: 30px;
@@ -17,6 +94,10 @@
 
 .nav__link:hover {
     color: var(--accent-color);
+}
+
+.body--opened-menu .header__button {
+    display: none;
 }
 
 .header__button {
