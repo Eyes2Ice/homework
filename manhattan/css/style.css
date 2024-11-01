@@ -3,3 +3,89 @@
 @import "../css/global.css";
 
 @import "../css/header.css";
+
+/* =================================== */
+.main__hero {
+    margin: 40px auto 120px;
+}
+
+.hero__inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.hero__title {
+    padding-bottom: 43px;
+    padding-left: 60px;
+    border-radius: 5px;
+
+    background: url("../img/gallery/gallery-1.jpg") 50% 50% / cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 30px;
+
+    font-family: "Gotham Pro";
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--general-text);
+}
+
+.hero__title-text {
+    max-width: 154px;
+    padding: 10px 20px 7px;
+    background: var(--general-text);
+    border-radius: 5px;
+    white-space: nowrap;
+
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 0.9px;
+    color: var(--accent-text);
+}
+
+.hero__poster {
+    max-width: 416px;
+}
+
+.tab-controls {
+    display: flex;
+
+    font-weight: 700;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+}
+
+.tab-controls__item {
+    background: rgba(213, 98, 29, 0.05);
+    border-radius: 5px 5px 0px 0px;
+    padding: 12px 10px 7px;
+    flex-grow: 1;
+    max-width: 208px;
+    text-align: center;
+}
+
+.tab-controls__item--active {
+    background: rgba(213, 98, 29, 0.10);
+}
+
+.tab-controls__link {
+    padding: 12px 10px 7px;
+}
+
+.tab-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 26px;
+
+    border-radius: 0px 0px 5px 5px;
+    padding: 39px 35px 37px;
+    background: rgba(213, 98, 29, 0.10);
+}
+
+.tab-content-show {}
+
+/* =================================== */
