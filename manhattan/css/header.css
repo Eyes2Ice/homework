@@ -100,7 +100,7 @@
     display: none;
 }
 
-.header__button {
+.button {
     padding: 15px 30px;
     background: transparent;
     border-radius: 5px;
@@ -108,12 +108,12 @@
 
     color: var(--general-text);
     text-transform: uppercase;
-    letter-spacing: 0.7;
+    letter-spacing: 0.7px;
 
     transition: var(--transition);
 }
 
-.header__button:hover {
+.button:hover {
     background: var(--general-text);
     color: var(--accent-color);
 }

@@ -5,9 +5,6 @@
 @import "../css/header.css";
 
 /* =================================== */
-.main__hero {
-    margin: 40px auto 120px;
-}
 
 .hero__inner {
     display: flex;
@@ -34,17 +31,20 @@
     color: var(--general-text);
 }
 
-.hero__title-text {
-    max-width: 154px;
+.title-text {
     padding: 10px 20px 7px;
     background: var(--general-text);
     border-radius: 5px;
-    white-space: nowrap;
-
     text-align: center;
+    color: var(--accent-text);
+    letter-spacing: 0.7px;
+}
+
+.hero__title-text {
+    max-width: 154px;
+    white-space: nowrap;
     font-size: 18px;
     letter-spacing: 0.9px;
-    color: var(--accent-text);
 }
 
 .hero__poster {
@@ -53,7 +53,7 @@
 
 .hero__poster img {
     width: 100%;
-    ;
+    transform: scale(1.1);
 }
 
 .tab-controls {
@@ -135,6 +135,9 @@
         max-width: 500px;
         width: 100%;
     }
+    .hero__poster img {
+        transform: none;
+    }
 
     .tab-controls__item {
         max-width: 250px;
@@ -212,15 +215,27 @@
         padding: 10px;
         gap: 10px;
     }
+
+    /* =============================== */
+
+    .modal__window {
+        padding: 10px 20px 20px;
+    }
 }
 
 @media(max-width:400px) {
     .hero__title {
         font-size: 30px;
+        margin-bottom: 15px;
     }
 
     .hero__title-text {
         padding: 0;
     }
 
+    /* ==================================== */
+
+    .modal__img img {
+        max-width: 90px;
+    }
 }
