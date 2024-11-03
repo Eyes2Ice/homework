@@ -135,6 +135,7 @@
         max-width: 500px;
         width: 100%;
     }
+
     .hero__poster img {
         transform: none;
     }
@@ -187,6 +188,10 @@
 }
 
 @media (max-width:500px) {
+    .body--opened-modal {
+        padding-right: 0;
+    }
+
     .header__inner {
         flex-wrap: wrap;
         gap: 25px 50px;
