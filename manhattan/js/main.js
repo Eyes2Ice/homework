@@ -84,7 +84,7 @@
     new Swiper('.kitchen__slider', {
         initialSlide: 0,
         spaceBetween: 50,
-        slidesPerView: 1,
+        slidesPerView: 2,
 
         navigation: {
             nextEl: '.kitchen__next',
