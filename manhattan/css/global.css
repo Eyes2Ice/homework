@@ -46,6 +46,10 @@ body {
     margin: 40px auto 120px;
 }
 
+.main__kitchen {
+    margin: 0 auto 120px;
+}
+
 .title {
     font-family: "Gotham Pro";
     font-size: 40px;

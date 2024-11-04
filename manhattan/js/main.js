@@ -83,12 +83,21 @@
 
     new Swiper('.kitchen__slider', {
         initialSlide: 0,
-        spaceBetween: 104,
-        slidesPerView: 2,
+        spaceBetween: 50,
+        slidesPerView: 1,
 
         navigation: {
             nextEl: '.kitchen__next',
             prevEl: '.kitchen__prev',
+        },
+
+        breakpoints: {
+            1101: {
+                spaceBetween: 104,
+            },
+            1001: {
+                slidesPerView: 2,
+            },
         },
     });
 })()
