@@ -10,6 +10,7 @@ html {
     --accent-bg: #d5621d1a;
 
     --transition: all .5s;
+    --border-radius: 5px;
 }
 
 body {
@@ -45,6 +46,14 @@ body {
     margin: 40px auto 120px;
 }
 
+.title {
+    font-family: "Gotham Pro";
+    font-size: 40px;
+    line-height: 150%;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 
 .container {
     max-width: 1310px;
@@ -102,7 +111,7 @@ body {
     justify-content: center;
     align-items: center;
     width: 40px;
-    border-radius: 5px;
+    border-radius: var(--border-radius);
     aspect-ratio: 1/1;
     align-self: end;
     transition: var(--transition);

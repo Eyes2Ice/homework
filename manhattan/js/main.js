@@ -79,4 +79,16 @@
     let im = new Inputmask('+7 (999) 999-99-99');
     im.mask(inputsTel);
 
+    // ===============================Cлайдер меню=================================
+
+    new Swiper('.kitchen__slider', {
+        initialSlide: 0,
+        spaceBetween: 104,
+        slidesPerView: 2,
+
+        navigation: {
+            nextEl: '.kitchen__next',
+            prevEl: '.kitchen__prev',
+        },
+    });
 })()

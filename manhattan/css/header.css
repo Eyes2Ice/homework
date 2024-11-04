@@ -103,7 +103,7 @@
 .button {
     padding: 15px 30px;
     background: transparent;
-    border-radius: 5px;
+    border-radius: var(--border-radius);
     border: 2px solid var(--accent-color);
 
     color: var(--general-text);
