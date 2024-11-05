@@ -92,11 +92,13 @@
         },
 
         breakpoints: {
-            1101: {
-                spaceBetween: 104,
-            },
             1001: {
                 slidesPerView: 2,
+                spaceBetween: 104,
+            },
+            1101: {
+                slidesPerView: 2,
+                spaceBetween: 104,
             },
         },
     });
