@@ -41,6 +41,7 @@
     font-family: "Gotham Pro";
     font-weight: 700;
     text-transform: uppercase;
+    white-space: nowrap;
 }
 
 .hero__title-text {
@@ -109,6 +110,8 @@
 }
 
 /* =================================== */
+
+
 
 .kitchen__inner {
     display: flex;
@@ -250,6 +253,52 @@
     background: var(--accent-color);
 }
 
+/* =================================== */
+
+.main__events {
+    margin-bottom: 120px;
+}
+
+.events__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 44px;
+
+}
+
+.events__about {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.events__title-text {
+    max-width: 260px;
+    margin-bottom: 40px;
+}
+
+.events__title {
+    margin-bottom: 35px;
+}
+
+.events__text {
+    margin-bottom: 35px;
+}
+
+.events__button {
+    max-width: 156px;
+}
+
+.events__img {
+    flex-shrink: 0;
+}
+
+.events__img img {
+    width: 100%;
+    border-radius: var(--border-radius);
+}
 
 /* =================================== */
 
@@ -370,6 +419,54 @@
     }
 }
 
+@media (max-width:550px) {
+
+    .kitchen__menu {
+        margin-bottom: 60px;
+    }
+
+    .kitchen__slide {
+        gap: 55px;
+        padding-bottom: 45px;
+    }
+
+    .kitchen__title-text {
+        margin-bottom: 15px;
+    }
+
+    .kitchen__title {
+        margin-bottom: 20px;
+    }
+
+    .kitchen__slide-item {
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+
+        gap: 0;
+    }
+
+    .kitchen__slide-img {
+        max-width: 140px;
+    }
+
+    .kitchen__slide-about .title {
+        font-size: 17px;
+    }
+
+    .kitchen__slide-price {
+        max-width: 130px;
+        width: 100%;
+        padding: 5px;
+        top: 330%;
+        right: 2.5%;
+    }
+
+    .kitchen__slide-about p {
+        display: none;
+    }
+}
+
 @media (max-width:500px) {
     .body--opened-modal {
         padding-right: 0;
@@ -411,49 +508,6 @@
     }
 }
 
-@media (max-width:550px) {
-
-    .kitchen__slide {
-        gap: 55px;
-    }
-
-    .kitchen__title-text {
-        margin-bottom: 15px;
-    }
-
-    .kitchen__title {
-        margin-bottom: 20px;
-    }
-
-    .kitchen__slide-item {
-        flex-direction: column-reverse;
-        align-items: center;
-        text-align: center;
-
-        gap: 0;
-    }
-
-    .kitchen__slide-img {
-        max-width: 140px;
-    }
-
-    .kitchen__slide-about .title {
-        font-size: 17px;
-    }
-
-    .kitchen__slide-price {
-        max-width: 130px;
-        width: 100%;
-        padding: 5px;
-        top: 330%;
-        right: 2.5%;
-    }
-
-    .kitchen__slide-about p {
-        display: none;
-    }
-}
-
 @media(max-width:400px) {
     .hero__title {
         font-size: 30px;
@@ -462,6 +516,12 @@
 
     .hero__title-text {
         padding: 0;
+    }
+
+    /* ==================================== */
+
+    .kitchen__title {
+        font-size: 30px;
     }
 
     /* ==================================== */
