@@ -327,6 +327,12 @@
     .kitchen__slide-item {
         gap: 20px;
     }
+
+    /* * ============================== */
+
+    .events__inner {
+        gap: 10px;
+    }
 }
 
 @media (max-width:1000px) {
@@ -334,6 +340,18 @@
     .kitchen__slide-item {
         max-width: 650px;
     }
+
+    /* ============================ */
+
+    .events__inner {
+        gap: 25px;
+    }
+
+    .events__img {
+        display: none;
+    }
+
+
 }
 
 @media (max-width:900px) {
@@ -354,6 +372,8 @@
     .tab-controls__item {
         max-width: 250px;
     }
+
+    /* =========================== */
 }
 
 @media (max-width:750px) {
@@ -416,6 +436,27 @@
 
     .kitchen__slide {
         gap: 35px;
+    }
+
+        /* ========================= */
+
+    .events__inner {
+        flex-direction: column;
+        gap: 60px;
+        margin-bottom: 80px;
+    }
+
+    .events__title-text {
+        margin-bottom: 10px;
+    }
+
+    .events__title,
+    .events__text {
+        margin-bottom: 20px;
+    }
+
+    .events__title {
+        font-size: 30px;
     }
 }
 
