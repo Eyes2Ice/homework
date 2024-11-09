@@ -46,7 +46,8 @@ body {
     margin: 40px auto 120px;
 }
 
-.main__kitchen {
+.main__kitchen, 
+.main__rider {
     margin: 0 auto 120px;
 }
 
