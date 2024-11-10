@@ -140,9 +140,9 @@
     // =============================Cлайдер галлереи===================================
 
     new Swiper('.gallery__slider', {
-
-        spaceBetween: 30,
-        slidesPerView: 4,
+        spaceBetween: 15,
+        speed: 1000,
+        slidesPerView: 2,
         initialSlide: 1,
 
         scrollbar: {
@@ -153,6 +153,21 @@
         autoplay: {
             delay: 1500,
             disableOnInteraction: false,
+        },
+
+        breakpoints: {
+            501: {
+                spaceBetween: 30,
+                slidesPerView: 2,
+            },
+            601: {
+                spaceBetween: 30,
+                slidesPerView: 3,
+            },
+            1001: {
+                spaceBetween: 30,
+                slidesPerView: 4,
+            },
         },
     });
 
