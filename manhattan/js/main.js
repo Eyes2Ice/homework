@@ -140,6 +140,7 @@
     // =============================Cлайдер галлереи===================================
 
     new Swiper('.gallery__slider', {
+
         spaceBetween: 30,
         slidesPerView: 4,
         initialSlide: 1,
@@ -153,17 +154,6 @@
             delay: 1500,
             disableOnInteraction: false,
         },
-
-        // Добавьте эффект перехода
-        effect: 'fade', // можно использовать 'slide', 'fade', 'cube', 'coverflow', 'flip'
-
-        // Для эффекта fade
-        fadeEffect: {
-            crossFade: true,
-        },
-
-        // Установка плавности при переходе между слайдами
-        speed: 600, // время перехода в миллисекундах
     });
 
 })()
