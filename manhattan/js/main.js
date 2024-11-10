@@ -81,7 +81,7 @@
 
     // ===============================Cлайдер меню=================================
 
-    new Swiper('.kitchen__slider', {
+    const swiper = new Swiper('.kitchen__slider', {
         initialSlide: 0,
         spaceBetween: 50,
         slidesPerView: 1,
@@ -136,5 +136,25 @@
             accordionContent.style.maxHeight = null;
         }
     })
+
+    // =============================Cлайдер галлереи===================================
+
+    new Swiper('.gallery__slider', {
+
+        spaceBetween: 30,
+        slidesPerView: 4,
+        initialSlide: 0,
+
+        // pagination: {
+        //     el: '.gallery__pagination',
+        //     type: 'fraction',
+        // },
+
+        // navigation: {
+        //     nextEl: '.gallery__next',
+        //     prevEl: '.gallery__prev',
+        // },
+
+    });
 
 })()
