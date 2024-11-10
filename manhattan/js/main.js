@@ -140,21 +140,30 @@
     // =============================Cлайдер галлереи===================================
 
     new Swiper('.gallery__slider', {
-
         spaceBetween: 30,
         slidesPerView: 4,
-        initialSlide: 0,
+        initialSlide: 1,
 
-        // pagination: {
-        //     el: '.gallery__pagination',
-        //     type: 'fraction',
-        // },
+        scrollbar: {
+            el: '.swiper-scrollbar',
+            draggable: true,
+        },
 
-        // navigation: {
-        //     nextEl: '.gallery__next',
-        //     prevEl: '.gallery__prev',
-        // },
+        autoplay: {
+            delay: 1500,
+            disableOnInteraction: false,
+        },
 
+        // Добавьте эффект перехода
+        effect: 'fade', // можно использовать 'slide', 'fade', 'cube', 'coverflow', 'flip'
+
+        // Для эффекта fade
+        fadeEffect: {
+            crossFade: true,
+        },
+
+        // Установка плавности при переходе между слайдами
+        speed: 600, // время перехода в миллисекундах
     });
 
 })()
