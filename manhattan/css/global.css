@@ -48,8 +48,13 @@ body {
 
 .main__kitchen,
 .main__rider,
-.main__gallery {
+.main__gallery,
+.main__events {
     margin: 0 auto 120px;
+}
+
+.main__contact {
+    margin: 0 auto 100px;
 }
 
 .title {
@@ -220,4 +225,18 @@ body {
 .modal__button {
     margin-top: 20px;
     width: 100%;
+}
+
+*::-webkit-scrollbar {
+    width: 17px;
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--accent-bg);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--general-text);
+    border-radius: var(--border-radius);
+    border: 3px solid var(--accent-color);
 }

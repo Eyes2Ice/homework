@@ -1,0 +1,9 @@
+.footer__inner {
+    border-top: 1px solid #ffffff80;
+    padding-top: 30px;
+    margin-bottom: 133px    ;
+}
+
+.footer__text {
+    opacity: 0.5;
+}

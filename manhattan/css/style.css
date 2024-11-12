@@ -3,6 +3,7 @@
 @import "../css/global.css";
 
 @import "../css/header.css";
+@import "../css/footer.css";
 
 /* =================================== */
 
@@ -79,7 +80,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: rgba(213, 98, 29, 0.05);
+    background: #d5621d0d;
     border-radius: var(--border-radius) 5px 0px 0px;
     min-height: 40px;
     flex: 1;
@@ -94,7 +95,7 @@
 }
 
 .tab-controls__link--active {
-    background: #d5621d1a;
+    background: var(--accent-bg);
 
 }
 
@@ -119,7 +120,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
 
 }
 
@@ -259,10 +259,6 @@
 
 /* =================================== */
 
-.main__events {
-    margin-bottom: 120px;
-}
-
 .events__inner {
     display: flex;
     justify-content: center;
@@ -338,7 +334,7 @@
     display: block;
     margin-bottom: 20px;
     border-radius: var(--border-radius);
-    background: #d5621d1a;
+    background: var(--accent-bg);
     transition: var(--transition);
 }
 
@@ -460,7 +456,7 @@
     align-items: center;
     width: 40px;
     height: 40px;
-    border: 2px solid var(--accent, #D5621D);
+    border: 2px solid var(--accent-color);
     border-radius: var(--border-radius);
     padding: 10px;
     transition: var(--transition);
@@ -560,6 +556,92 @@
 
 /* =================================== */
 
+.contact__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact__title-text {
+    max-width: 244px;
+    margin-bottom: 40px;
+}
+
+.contact__title {
+    margin-bottom: 80px;
+}
+
+.contact__about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    width: 100%;
+}
+
+.contact__content {
+    max-width: 416px;
+    padding: 50px;
+
+    border-radius: var(--border-radius);
+    border: 2px solid var(--accent, #D5621D);
+    background: var(--accent-bg);
+}
+
+.contact__content a {
+    display: inline-block;
+    transition: var(--transition);
+}
+
+.contact__content a:hover {
+    color: var(--accent-color);
+    transform: scale(1.1)translate(5%);
+}
+
+.contact__info {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.contact__info:first-child {
+    margin-bottom: 45px;
+}
+
+.contact__info:last-child {
+    margin-top: 45px;
+}
+
+.contact__text h6 {
+    margin-bottom: 20px;
+
+    font-family: "Gotham Pro";
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.9px;
+    text-transform: uppercase;
+}
+
+.contact__line {
+    display: block;
+    height: 1px;
+    opacity: 0.5;
+    background: var(--general-text);
+}
+
+.contact__map {
+    max-width: 840px;
+    width: 100%;
+}
+
+.contact__map iframe {
+    border: 2px solid var(--accent-color);
+    border-radius: var(--border-radius);
+    width: 100%;
+}
+
+/* =============================== */
+
 @media (max-width:1100px) {
     .nav__list {
         display: flex;
@@ -596,6 +678,17 @@
 
     .rider__info {
         gap: 100px;
+    }
+
+    /* ============================ */
+
+    .contact__about {
+        flex-direction: column;
+    }
+
+    .contact__content {
+        max-width: 700px;
+        text-align: center;
     }
 }
 
@@ -714,7 +807,7 @@
     }
 
     .kitchen__title-text {
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
 
     .kitchen__title {
@@ -788,7 +881,26 @@
         margin-bottom: 20px;
     }
 
+    /* ================================== */
 
+    .main__contact {
+        margin-bottom: 80px;
+    }
+
+    .contact__title-text {
+        margin-bottom: 10px;
+    }
+
+    .contact__title {
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+
+    /* ========================= */
+
+    .footer__inner {
+        text-align: center;
+    }
 }
 
 @media (max-width:550px) {
@@ -836,6 +948,20 @@
 
     .kitchen__slide-about p {
         display: none;
+    }
+
+    /* ================================== */
+
+    .contact__content {
+        padding: 30px;
+    }
+
+    .contact__map {
+        height: 450px;
+    }
+
+    .contact__map iframe {
+        height: 100%;
     }
 }
 
@@ -889,6 +1015,16 @@
     .gallery__button {
         margin-bottom: 10px;
     }
+
+    /* ==================================== */
+
+    .contact__info {
+        gap: 20px;
+    }
+
+    .contact__text h6 {
+        margin-bottom: 10px;
+    }
 }
 
 @media(max-width:400px) {
@@ -927,7 +1063,11 @@
 
     /* ==================================== */
 
+    .contact__map {
+        height: 300px;
+    }
 
+    /* ==================================== */
 
     .modal__img img {
         max-width: 90px;
