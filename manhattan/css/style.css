@@ -827,7 +827,6 @@
     .events__inner {
         flex-direction: column;
         gap: 60px;
-        margin-bottom: 80px;
     }
 
     .events__title-text {
